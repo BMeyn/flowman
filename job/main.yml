@@ -1,0 +1,6 @@
+jobs:
+  # Define the 'main' job, which implicitly is used whenever you build the whole project
+  main:
+    # List all targets which should be built as part of the `main` job
+    targets:
+      - data_target

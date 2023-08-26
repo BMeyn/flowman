@@ -1,0 +1,15 @@
+relations:
+  data_raw:
+    # The relation is of type "file"
+    kind: file
+    # ... and it uses CSV as file format
+    format: csv
+    # data itself is stored at the following location
+    location: "data/sample.csv"
+    # Specify some CSV-specific options
+    options:
+      sep: ","
+      encoding: "UTF-8"
+      quote: "\""
+      header: "true"
+      dateFormat: "dd.MM.yyyy"

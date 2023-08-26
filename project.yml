@@ -1,0 +1,24 @@
+# The project name is mandatory
+name: "weather"
+# Optionally you can provide a project version
+version: "1.0"
+# Optionally you can provide a description
+description: "
+    This is a simple but very comprehensive example project for Flowman using publicly available weather data.
+    The project will demonstrate many features of Flowman, like reading and writing data, performing data transformations,
+    joining, filtering and aggregations. The project will also create a meaningful documentation containing data quality
+    tests.
+  "
+
+# The following modules simply contain a list of subdirectories containing YAML files containing all entities
+modules:
+  # All relations describing data sources and sinks are stored in the "model" subdirectory 
+  - model
+  # Data transformations (mappings) are stored in the "mapping" subdirectory
+  - mapping
+  # Build targets go into the "target" directory
+  - target
+  # Build jobs bundling multiple targets go into the "job" directory
+  - job
+  # All configurations go into the "config" directory
+  - config
