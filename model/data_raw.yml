@@ -5,7 +5,7 @@ relations:
     # ... and it uses CSV as file format
     format: csv
     # data itself is stored at the following location
-    location: "data/sample.csv"
+    location: "$basedir/data/sample-${year}.csv"
     # Specify some CSV-specific options
     options:
       sep: ","
@@ -15,8 +15,8 @@ relations:
   data_sink:
     kind: file
     description: "data sink"
-    format: parquet
-    location: "$basedir/data"
+    format: csv
+    location: "$basedir/output"
     schema:
       kind: inline
       fields:

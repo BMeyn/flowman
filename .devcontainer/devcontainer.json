@@ -3,7 +3,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"redhat.vscode-yaml"
+				"redhat.vscode-yaml",
+				"vscode-icons-team.vscode-icons"
 			]
 		}
 	}

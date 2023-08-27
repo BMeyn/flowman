@@ -3,7 +3,8 @@ targets:
   data_target:
     # ... which builds a relation
     kind: relation
+    mode: append
     # ... by reading the result from the mapping "stations_conformed"
-    mapping: data_mapping
+    mapping: data_raw
     # ... and by writing the records to the relation "stations"
     relation: data_sink

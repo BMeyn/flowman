@@ -1,0 +1,4 @@
+output/
+.generated
+derby.log
+generated-report.txt

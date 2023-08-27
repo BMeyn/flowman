@@ -1,2 +1,2 @@
 environment:
-  - basedir=file://workspaces/flowman
+  - basedir=file:///workspaces/flowman

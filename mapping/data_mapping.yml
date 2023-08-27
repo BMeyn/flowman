@@ -3,10 +3,9 @@ mappings:
     kind: relation
     relation: data_raw
   # This mapping refers to the "raw" relation and reads in data from the source in S3
-  data_mapping:
-    kind: select
-    input: data_raw
-    columns:
-      name: "name"
-      birth: "birth"
-      weight: "weight"
+  #data_mapping:
+  #  kind: select
+  # input: data_raw
+  #   columns:
+  #    name: "name"
+  #   weight: "weight"
