@@ -12,4 +12,15 @@ relations:
       encoding: "UTF-8"
       quote: "\""
       header: "true"
-      dateFormat: "dd.MM.yyyy"
+  data_sink:
+    kind: file
+    description: "data sink"
+    format: parquet
+    location: "$basedir/data"
+    schema:
+      kind: inline
+      fields:
+        - name: "name"
+          type: string
+        - name: "weight"
+          type: string

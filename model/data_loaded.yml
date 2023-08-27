@@ -1,6 +1,0 @@
-relations:
-  data_loaded:
-      kind: file
-      description: "The 'stations' table contains meta data on all weather stations"
-      format: parquet
-      location: "data/"

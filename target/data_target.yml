@@ -6,4 +6,4 @@ targets:
     # ... by reading the result from the mapping "stations_conformed"
     mapping: data_mapping
     # ... and by writing the records to the relation "stations"
-    relation: data_loaded
+    relation: data_sink
