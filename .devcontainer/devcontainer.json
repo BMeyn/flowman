@@ -1,1 +1,10 @@
-{"image":"dimajix/flowman:1.0.0-oss-spark3.3-hadoop3.3"}
+{
+	"image": "dimajix/flowman:1.0.0-oss-spark3.3-hadoop3.3",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"redhat.vscode-yaml"
+			]
+		}
+	}
+}
