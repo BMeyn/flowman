@@ -1,0 +1,36 @@
+tests:
+  common_fixtures:
+    overrideMappings:
+      data_raw:
+        kind: mock
+        records:
+          - ["name", "weight"]
+          - ["test", 42]
+
+  test_data_sink:
+    description: "Test all aggregations"
+    extends:
+      - common_fixtures
+        
+    environment:
+      - some_value=12  
+
+    targets:
+      - data_sink
+      
+    fixtures:
+      prepare_additional_data:
+        kind: relation
+        relation: additional_data
+        mapping: mapping_a
+
+    assertions:
+      data_sink:
+        kind: sql
+        description: "Measurements are extracted correctly"
+        tests:
+          - query: "SELECT * FROM data_sink"
+            expected:
+              - ["test", 42]
+          - query: "SELECT COUNT(*) FROM measurements_extracted"
+            expected: 1
