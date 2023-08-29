@@ -1,0 +1,3 @@
+
+environment:
+  - basedir=file:///workspaces/flowman/daily
