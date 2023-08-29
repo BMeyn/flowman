@@ -1,3 +1,11 @@
 relations:
   data_sink:
     kind: file
+    description: "data sink"
+    format: parquet
+    location: "$basedir/output"
+    schema:
+      kind: inline
+      fields:
+        - name:
+          type: 
