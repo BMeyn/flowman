@@ -5,8 +5,12 @@
 			"extensions": [
 				"redhat.vscode-yaml",
 				"vscode-icons-team.vscode-icons",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"GitHub.copilot"
 			]
 		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {}
 	}
 }
