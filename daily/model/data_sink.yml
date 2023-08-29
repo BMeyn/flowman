@@ -1,1 +1,3 @@
-
+relations:
+  data_sink:
+    kind: file
