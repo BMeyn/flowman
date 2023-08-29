@@ -1,0 +1,5 @@
+mapping:
+  sink_mapping:
+    kind: relation
+    location:
+    

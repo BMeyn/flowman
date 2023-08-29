@@ -2,6 +2,11 @@ mappings:
   data_raw:
     kind: relation
     relation: data_raw
+
+  data_sink:
+    kind: relation
+    relation: data_sink
+    
   # This mapping refers to the "raw" relation and reads in data from the source in S3
   #data_mapping:
   #  kind: select

@@ -13,24 +13,19 @@ tests:
       - common_fixtures
         
     environment:
-      - some_value=12  
+      - year=2014
 
     targets:
-      - data_sink
+      - data_target
       
-    fixtures:
-      prepare_additional_data:
-        kind: relation
-        relation: additional_data
-        mapping: mapping_a
-
     assertions:
-      data_sink:
+      data_raw:
         kind: sql
         description: "Measurements are extracted correctly"
         tests:
-          - query: "SELECT * FROM data_sink"
+          - query: "SELECT * FROM data_raw"
             expected:
+              - ["name", "weight"]
               - ["test", 42]
-          - query: "SELECT COUNT(*) FROM measurements_extracted"
-            expected: 1
+          - query: "SELECT COUNT(*) FROM data_raw"
+            expected: 2

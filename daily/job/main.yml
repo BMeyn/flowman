@@ -1,0 +1,4 @@
+jobs:
+  main:
+    targets:
+      - target_data_sink

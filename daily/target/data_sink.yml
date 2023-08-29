@@ -1,0 +1,6 @@
+targets:
+  target_sink:
+    kind: relation
+    mode: update
+    relation:
+    mapping: 
