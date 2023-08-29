@@ -1,4 +1,4 @@
-mapping:
+mappings:
   sink_mapping:
     kind: relation
     relation: data_sink
