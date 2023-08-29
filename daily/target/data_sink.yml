@@ -2,5 +2,5 @@ targets:
   target_sink:
     kind: relation
     mode: update
-    relation:
-    mapping: 
+    relation: data_source
+    mapping: data_sink
