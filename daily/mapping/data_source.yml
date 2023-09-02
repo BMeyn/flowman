@@ -1,4 +1,4 @@
 mappings:
-  source_mapping:
+  data_source:
     kind: relation
     relation: data_source

@@ -1,11 +1,53 @@
 relations:
-  data_sink:
+  data_raw_sink:
     kind: file
     description: "data sink"
     format: parquet
-    location: "$basedir/output"
+    location: "$basedir/data/raw/person"
+    partitions:
+      - name: load_date
+        type: timestamp
+        granularity: P1M
     schema:
       kind: inline
       fields:
-        - name:
-          type: 
+        - name: id
+          type: integer
+        - name: name
+          type: string
+        - name: adress
+          type: string
+        - name: email
+          type: string
+        - name: phone
+          type: string
+        - name: job
+          type: string
+        - name: last_modified
+          type: timestamp
+        - name: load_date
+          type: timestamp
+
+  data_silver_sink:
+    kind: deltaFile
+    location: "$basedir/data/silver/person"
+    mergeKey: id
+    schema:
+      kind: inline
+      fields:
+        - name: id
+          type: integer
+        - name: name
+          type: string
+        - name: adress
+          type: string
+        - name: email
+          type: string
+        - name: phone
+          type: string
+        - name: job
+          type: string
+        - name: last_modified
+          type: timestamp
+        - name: load_date
+          type: timestamp

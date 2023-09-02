@@ -1,6 +1,12 @@
 targets:
-  target_sink:
+  target_raw_sink:
     kind: relation
-    mode: update
-    relation: data_source
-    mapping: data_sink
+    mode: overwrite_dynamic
+    mapping: add_load_date
+    relation: data_raw_sink
+
+  target_silver_sink:
+    kind: relation
+    mode: overwrite
+    mapping: data_raw_sink_map
+    relation: data_silver_sink

@@ -1,11 +1,11 @@
 relations:
-  data_raw:
+  data_source:
     # The relation is of type "file"
     kind: file
     # ... and it uses CSV as file format
     format: csv
     # data itself is stored at the following location
-    location: "$basedir/data/sample-${year}.csv"
+    location: "$basedir/data/source/customer/person.csv"
     # Specify some CSV-specific options
     options:
       sep: ","

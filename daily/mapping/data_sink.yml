@@ -1,4 +1,11 @@
 mappings:
-  sink_mapping:
+  add_load_date:
+    kind: extend
+    input: data_source
+    columns:
+      load_date: "CURRENT_TIMESTAMP()"
+  data_raw_sink_map: 
     kind: relation
-    relation: data_sink
+    relation: data_raw_sink
+    partitions:
+      load_date: "2023-08-30 10:23:07"

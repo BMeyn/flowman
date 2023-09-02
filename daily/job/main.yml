@@ -1,4 +1,5 @@
 jobs:
   main:
     targets:
-      - target_data_sink
+      - target_raw_sink
+      - target_silver_sink
